@@ -11,7 +11,7 @@ const useGetCompanyById = (comapanyId) => {
     useEffect(()=>{
         const fatchSingleCompany = async () => {
             try {
-                const res = await axios.get(`${COMPANY_API_END_POINT}/get/${comapanyId}`,{withCredentials:true});
+                const res = await axios.get(`https://jobportal-1-qfkx.onrender.com/api/v1/company/get/${comapanyId}`,{withCredentials:true});
                 if(res.data.success){
                     dispatch(setSingleCompany(res.data.company));
                 }
