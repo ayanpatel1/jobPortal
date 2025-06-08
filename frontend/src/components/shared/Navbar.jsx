@@ -20,11 +20,7 @@ const Navbar = () => {
 
     const logoutHandler = async () => {
         try {
-           const res = await axios.post(
-  `https://jobportal-1-qfkx.onrender.com/api/v1/application/status/${id}/update`,
-  { status }
-);
-
+             const res = await axios.get("https://jobportal-1-qfkx.onrender.com/api/v1/user/logout", { withCredentials: true });
             if (res.data.success) {
                 dispatch(setUser(null));
                 navigate("/");
