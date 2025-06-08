@@ -33,7 +33,7 @@ const MockInterviewPage = () => {
 
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/v1/ai/generate', {
+      const res = await fetch('https://jobportal-1-qfkx.onrender.com/api/v1/ai/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role: topic, difficulty })
