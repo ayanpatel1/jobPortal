@@ -95,7 +95,7 @@ const MockInterviewPage = () => {
 
   const saveResults = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/v1/interview/save', {
+      const res = await fetch('https://jobportal-1-qfkx.onrender.com/api/v1/interview/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: "123456", questions: answers })
